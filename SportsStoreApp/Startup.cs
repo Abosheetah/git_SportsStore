@@ -10,6 +10,7 @@ using SportsStoreApp.Models.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using SportsStoreApp.Models.Repository.RealDB;
+using SportsStore.Models;
 
 namespace SportsStoreApp
 {
@@ -45,6 +46,7 @@ namespace SportsStoreApp
                 name: "default",
                 template: "{controller=Product}/{action=List}/{id?}");
             });
+            SeedData.EnsurePopulated(app);
             
         }
 
