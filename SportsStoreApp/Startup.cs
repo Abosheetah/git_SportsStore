@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using SportsStoreApp.Models.Repository;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using SportsStoreApp.Models.Repository.RealDB;
 
 namespace SportsStoreApp
 {
@@ -16,7 +19,9 @@ namespace SportsStoreApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IProductRepository, FakeProductRepository>();
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
+
+            services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMvc();
         }
 
@@ -41,5 +46,9 @@ namespace SportsStoreApp
                 template: "{controller=Product}/{action=List}/{id?}");
             });
         }
+
+        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
+
     }
 }
