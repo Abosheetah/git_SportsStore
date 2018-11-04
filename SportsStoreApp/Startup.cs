@@ -45,6 +45,7 @@ namespace SportsStoreApp
                 name: "default",
                 template: "{controller=Product}/{action=List}/{id?}");
             });
+            
         }
 
         public IConfiguration Configuration { get; }
