@@ -10,9 +10,8 @@ namespace SportsStoreApp.Controllers{
         public ProductController(IProductRepository repo){
             _repo = repo;
         }
-        public ViewResult List(int productPage = 1) => View(_repo.Products
-        .OrderBy(p => p.ID)
-        .Skip((productPage - 1) * PageSize)
-        .Take(PageSize));
+        public ViewResult List(int productPage = 1){
+            return View(_repo.Products.OrderBy(x=> x.ID).Skip((productPage - 1) * PageSize).Take(PageSize));
+        }
     }
 }

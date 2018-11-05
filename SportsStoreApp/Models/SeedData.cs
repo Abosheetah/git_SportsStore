@@ -54,4 +54,5 @@ Category = "Chess", Price = 1200
  }
  }
  }
+ //bla bla
 }

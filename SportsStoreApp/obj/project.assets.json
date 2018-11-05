@@ -11538,11 +11538,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Abosheetah\\Desktop\\git_SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
+      "projectUniqueName": "c:\\Users\\Abosheetah\\Desktop\\git_SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
       "projectName": "SportsStoreApp",
-      "projectPath": "C:\\Users\\Abosheetah\\Desktop\\git_SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
+      "projectPath": "c:\\Users\\Abosheetah\\Desktop\\git_SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
       "packagesPath": "C:\\Users\\Abosheetah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Abosheetah\\Desktop\\git_SportsStore\\SportsStoreApp\\obj\\",
+      "outputPath": "c:\\Users\\Abosheetah\\Desktop\\git_SportsStore\\SportsStoreApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
