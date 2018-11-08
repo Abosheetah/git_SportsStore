@@ -11540,11 +11540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "h:\\SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
+      "projectUniqueName": "H:\\SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
       "projectName": "SportsStoreApp",
-      "projectPath": "h:\\SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
+      "projectPath": "H:\\SportsStore\\SportsStoreApp\\SportsStoreApp.csproj",
       "packagesPath": "C:\\Users\\Muhammad\\.nuget\\packages\\",
-      "outputPath": "h:\\SportsStore\\SportsStoreApp\\obj\\",
+      "outputPath": "H:\\SportsStore\\SportsStoreApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
