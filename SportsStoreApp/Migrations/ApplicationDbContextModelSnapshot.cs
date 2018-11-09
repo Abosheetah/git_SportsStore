@@ -31,6 +31,10 @@ namespace SportsStoreApp.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new { ID = 1, Description = "MAM", Name = "MAM" }
+                    );
                 });
 
             modelBuilder.Entity("SportsStoreApp.Models.Product", b =>

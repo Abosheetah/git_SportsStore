@@ -9,7 +9,7 @@ using SportsStoreApp.Models.Repository.RealDB;
 namespace SportsStoreApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181109090508_initial")]
+    [Migration("20181109145413_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,10 @@ namespace SportsStoreApp.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new { ID = 1, Description = "MAM", Name = "MAM" }
+                    );
                 });
 
             modelBuilder.Entity("SportsStoreApp.Models.Product", b =>

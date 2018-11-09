@@ -4,9 +4,30 @@
         <meta name="viewport" content="width=device-width" />
         <title>Party Invites</title>
         <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <style>
+            .placeholder:only-child { visibility: visible; display: flex }
+            .placeholder { visibility: collapse; display: none }
+        </style>
     </head>
     <body>
-        <div><h3 class="p2 bg-primary text-white text-center">List of Products</h3></div>
-        @RenderBody()
+        <h3 class="p-2 bg-primary text-white text-center">MAM</h3> 
+        <div class="container-fluid">
+            <div class="row p-2">
+                <div class="col-2">
+                    <a asp-controller="Product" asp-action="List" class="@GetClassForButton("Product")">Products</a>
+                    <a asp-controller="Category" asp-action="List"class="@GetClassForButton("Category")">Categories</a>
+                </div>
+                <div class="col">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>        
     </body>
 </html>
+
+@functions {
+    string GetClassForButton(string controller) {
+        return "btn btn-block " + (ViewContext.RouteData.Values["controller"]
+            as string == controller ? "btn-primary" : "btn-outline-primary");
+        }
+}

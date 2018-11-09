@@ -5,5 +5,7 @@ namespace SportsStoreApp.Models.Repository{
     {
         IQueryable<Product> Products{get;}
         void AddProduct(Product product);
+        Product GetProduct(int key);
+        void UpdateProduct(Product product);
     }
 }

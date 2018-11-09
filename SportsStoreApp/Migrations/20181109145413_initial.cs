@@ -43,6 +43,11 @@ namespace SportsStoreApp.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "ID", "Description", "Name" },
+                values: new object[] { 1, "MAM", "MAM" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryID",
                 table: "Products",

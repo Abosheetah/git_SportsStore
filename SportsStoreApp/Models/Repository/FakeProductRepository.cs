@@ -16,6 +16,16 @@ namespace SportsStoreApp.Models.Repository{
         public void AddProduct(Product product)
         {
             throw new System.Exception("Not fount");
+        }      
+
+        public Product GetProduct(int key)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

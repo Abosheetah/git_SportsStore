@@ -50,3 +50,5 @@ C:\Users\Abosheetah\Desktop\git_SportsStore\SportsStoreApp\obj\Debug\netcoreapp2
 C:\Users\Abosheetah\Desktop\git_SportsStore\SportsStoreApp\obj\Debug\netcoreapp2.1\SportsStoreApp.dll
 C:\Users\Abosheetah\Desktop\git_SportsStore\SportsStoreApp\obj\Debug\netcoreapp2.1\SportsStoreApp.pdb
 C:\Users\Abosheetah\Desktop\git_SportsStore\SportsStoreApp\obj\Debug\netcoreapp2.1\SportsStoreApp.csproj.CopyComplete
+C:\Users\Abosheetah\Desktop\git_SportsStore\SportsStoreApp\obj\Debug\netcoreapp2.1\Razor\Views\Category\List.g.cshtml.cs
+C:\Users\Abosheetah\Desktop\git_SportsStore\SportsStoreApp\obj\Debug\netcoreapp2.1\Razor\Views\Product\UpdateProduct.g.cshtml.cs

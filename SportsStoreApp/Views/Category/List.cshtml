@@ -1,0 +1,40 @@
+@model IQueryable<Category>   
+    <h3 class="p-2 bg-primary text-white text-center">Categories</h3> 
+    <div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col font-weight-bold">Name</div>  
+        <div class="col font-weight-bold">Description</div>
+        <div class="col font-weight-bold"></div>             
+    </div>    
+        <form asp-action="AddCategory" method="POST">
+            <div class="row">            
+                <div class="col">
+                    <input name="Name" class="form-control">
+                </div>        
+                <div class="col">
+                    <input name="Description" class="form-control">
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
+        </form>  
+        @foreach (var i in Model)
+        {
+            <div class="row">            
+                <div class="col">
+                    @i.Name
+                </div>        
+                <div class="col">
+                    @i.Description
+                </div>
+                <div class="col">
+                    <a asp-action="EditCategory" asp-route-id="@i.ID" class="btn btn-outline-primary">Edit</a>                
+                    <a asp-action="DeleteCategory" asp-route-id="@i.ID" class="btn btn-outline-danger">Delete</a>
+                </div>
+            </div>
+        } 
+</div>
