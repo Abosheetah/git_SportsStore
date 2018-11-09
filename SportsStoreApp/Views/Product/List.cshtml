@@ -1,9 +1,39 @@
 @model IEnumerable<Product>
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col font-weight-bold">Name</div>
+        <div class="col font-weight-bold">Price</div>
+        <div class="col font-weight-bold">Category</div>
+        <div class="col font-weight-bold">Description</div>
+        <div class="col font-weight-bold"></div>
+    </div>    
+        <form asp-action="AddProduct" method="POST">
+            <div class="row">            
+                <div class="col">
+                    <input name="Name" class="form-control">
+                </div>
+                <div class="col">
+                    <input name="Price" class="form-control">
+                </div>
+                <div class="col">
+                    <input name="CategoryID" class="form-control">
+                </div>
+                <div class="col">
+                    <input name="Description" class="form-control">
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </div>
+        </form>    
+</div>
+
 @foreach (var p in Model) {
-    <div>
-        <h3>@p.Name</h3>
-        @p.Category.ToString()<br>
-        @p.Description
-        <h4>@p.Price.ToString("c")</h4>
- </div>
+    <div class="row p-2">
+        <div class="col">@p.Name</div>
+        <div class="col">@p.Price</div>
+        <div class="col">@p.Category</div>
+        <div class="col">@p.Description</div>        
+    </div>
 }

@@ -4,5 +4,6 @@ namespace SportsStoreApp.Models.Repository{
     public interface IProductRepository
     {
         IQueryable<Product> Products{get;}
+        void AddProduct(Product product);
     }
 }

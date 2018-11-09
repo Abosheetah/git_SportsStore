@@ -9,5 +9,12 @@ namespace SportsStoreApp.Models.Repository{
             dBContext = ctx;
         }
         public IQueryable<Product> Products => dBContext.Products;
+
+        public void AddProduct(Product product)
+        {
+            dBContext.Products.Add(product);
+            dBContext.SaveChanges();
+            
+        }
     }
 }

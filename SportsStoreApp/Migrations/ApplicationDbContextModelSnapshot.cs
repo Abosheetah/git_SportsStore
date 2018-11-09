@@ -14,9 +14,24 @@ namespace SportsStoreApp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.2.0-preview3-35497")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("SportsStoreApp.Models.Category", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Categories");
+                });
 
             modelBuilder.Entity("SportsStoreApp.Models.Product", b =>
                 {
@@ -24,7 +39,7 @@ namespace SportsStoreApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Category");
+                    b.Property<int>("CategoryID");
 
                     b.Property<string>("Description");
 
@@ -34,7 +49,17 @@ namespace SportsStoreApp.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("CategoryID");
+
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("SportsStoreApp.Models.Product", b =>
+                {
+                    b.HasOne("SportsStoreApp.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
